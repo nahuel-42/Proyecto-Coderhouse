@@ -44,10 +44,6 @@ main{
     font-weight: 500;
     margin: 1rem;
 }
-.menu__link{
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-}
 .menu__link:hover{
     color: rgb(0, 0, 0);
     font-weight: 600;
