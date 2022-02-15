@@ -87,11 +87,9 @@ body{
 
 .ofertas--titulo{
     margin: auto;
-    background-color: black;
-    background-image:url(../img/Fondotitulo.jpg);
     background-size: 100%;
     background-position: 50% 80%;
-    height: 10rem;
+    height: 5rem;
     width: 59%;
 
 }
