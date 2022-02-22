@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/6254e1665b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,39 +16,100 @@
 <body >
     <div class="estructura"> 
         <header>
-            <nav>
-                <div class="logo">
-                    <img class="imag__logo" src="./img/LOGO.png" alt="">
+            <nav class="navbar navbar-expand-lg bg-white">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img class="imag__logo" src="./img/LOGO.png" alt="Logo MQ BEBIDAS"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto mb-2 mb-lg-0 align-items-center">
+                            <li>
+                                <a class="nav-link menu__link" aria-current="page" href="./vistas/comocomprar.html">Como Comprar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu__link" aria-current="page" href="./vistas/catalogo.html ">Catalogo</a>
+                            </li>
+                            <li>
+                                <a class="nav-link menu__link" aria-current="page" href="./vistas/zonasentrega.html">Zona de entregas</a>
+                            </li>
+                            <li>
+                                <a class="nav-link menu__link" aria-current="page" href="./vistas/contacto.html">Contacto</a>
+                            </li>
+                            <li>
+                                <a class="nav-link menu__link border-left menu__iniciasesion"  id="menu--iniciasesion"aria-current="page" href="./vistas/contacto.html">Iniciar sesión</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " aria-current="page" href="./vistas/contacto.html"><i class="fa-solid fa-cart-shopping menu--carrito"></i></a>
+                            </li>
+                        </ul>
+                  </div>
                 </div>
-                <ul class="menu">
-                <li><a class="menu__link" href="./vistas/comocomprar.html">Como Comprar</a></li>
-                <li><a class="menu__link" href="./vistas/catalogo.html">Catálogo</a></li>
-                <li><a class="menu__link" href="./vistas/zonasentrega.html">Zonas de entrega</a></li>
-                <li><a class="menu__link" href="./vistas/contacto.html">Contacto</a></li>
-                <li>
-                    <div class="menu__iniciasesion">
-                        <a class="menu__link" id="menu--iniciasesion" href="./vistas/contacto.html">Iniciar sesión</a>
-                    </div>
-                </li>
-                <li>
-                    <a class="menu--carrito"  href="./vistas/contacto.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-                </ul>
-            </nav>
+              </nav>
         </header>
         <main>
-            <section class="banner">
-                <img class="patagoniabanner" src="./img/Fondopatagonia.png" alt="Coleccion patagonia"> 
+            <section class="mb-4"><!--Slider -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/Fondopatagonia3.png" class="d-block w-100" alt="coleccion patagonia">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/Fondo.jpg" class="d-block w-100" alt="recarga botellones">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/fondoartesanal.jpg" class="d-block w-100" alt="marcas de artesanal">
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </section>
-            <div class="ofertas--titulo">
-                <h2 class=main--titulo>¡BIENVENIDO A LA TIENDA!</h2>
-            </div>
-            <section class="ofertas"><!--Zona Productos. Cambie la organizacion de flexbox a grid -->
+            <section><!--Banner de info de compras -->
+                <div class="container-fluid fondo__banner"> 
+                    <div class="row">
+                      <div class="col-md-4  d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-truck-fast banner__iconos " ></i>
+                        <div class="m-2">
+                            <p class="banner__texto1 mb-0">Enviamos tu compra</p>
+                            <p class="banner__texto2 mb-0">Envios gratis desde 3000$</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-credit-card banner__iconos"></i>
+                        <div class="m-2">
+                            <p class="banner__texto1 mb-0">Paga como quieras</p>
+                            <p class="banner__texto2 mb-0">Todas las tarjetas y efectivo</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-circle-question  banner__iconos "></i>
+                        <div class="m-2">
+                            <p class="banner__texto1 mb-0">Como comprar</p>
+                            <p class="banner__texto2 mb-0">Paso a paso para que realices tu compra</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </section>
+            <h2 class="imperdibles">Imperdibles de la semana!</h2>
+            <section class="ofertas"><!--Zona Imperdibles -->
                 <div class=ofertas__productos>    
                     <img class="ofertas--imagen" src="./img/catalogo/sprite.png" alt="Sprite">
                     <p class="oferta__productos--texto">Sprite</p>
                     <p class="oferta__productos--capacidad">2.25L</p>
-                    <p class= "ofertas__productos__precio">$179</p>
+                    <p class= "ofertas__productos__precio"><span class="tachado">$215</span> $179</p>
                     <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
@@ -54,15 +117,15 @@
                     <img class="ofertas--imagen" src="./img/catalogo/Fernet.png" alt="Fernet">
                     <p class="oferta__productos--texto">Fernet</p>
                     <p class="oferta__productos--capacidad">750cc</p>
-                    <p class= "ofertas__productos__precio">$649</p>
+                    <p class= "ofertas__productos__precio"><span class="tachado">$730</span> $649</p>
                     <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
                 <div class=ofertas__productos>    
                     <img class="ofertas--imagen" src="./img/catalogo/patagonia 24.7.png" alt="patagonia 24.7">
-                    <p class="oferta__productos--texto">patagonia 24.7</p>
+                    <p class="oferta__productos--texto">Patagonia 24.7</p>
                     <p class="oferta__productos--capacidad">770cc</p>
-                    <p class= "ofertas__productos__precio">$200</p>
+                    <p class= "ofertas__productos__precio"><span class="tachado">$305</span> $200</p>
                     <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
@@ -70,7 +133,7 @@
                     <img class="ofertas--imagen" src="./img/catalogo/latastella.png" alt="Lata de stella artois ">
                     <p class="oferta__productos--texto">Stella Artois</p>
                     <p class="oferta__productos--capacidad">473cc</p>
-                    <p class= "ofertas__productos__precio">$149</p>
+                    <p class= "ofertas__productos__precio"><span class="tachado">$215</span> $149</p>
                     <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
@@ -78,7 +141,7 @@
                     <img class="ofertas--imagen" src="./img/catalogo/zucardi.png" alt="Vino Zuccardi ">
                     <p class="oferta__productos--texto">Vino Zuccardi</p>
                     <p class="oferta__productos--capacidad">1 L</p>
-                    <p class= "ofertas__productos__precio">$1099</p>
+                    <p class= "ofertas__productos__precio"><span class="tachado">$1250</span> $1099</p>
                     <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
@@ -86,7 +149,7 @@
                     <img class="ofertas--imagen" src="./img/catalogo/citric.png" alt="Jugo citric ">
                     <p class="oferta__productos--texto">Jugo citric</p>
                     <p class="oferta__productos--capacidad">1 L</p>
-                    <p class= "ofertas__productos__precio">$189</p>
+                    <p class= "ofertas__productos__precio"><span class="tachado">$270</span> $189</p>
                     <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
@@ -94,7 +157,7 @@
                     <img class="ofertas--imagen" src="./img/catalogo/gancia.png" alt="Gancia ">
                     <p class="oferta__productos--texto">Gancia</p>
                     <p class="oferta__productos--capacidad">1 L</p>
-                    <p class= "ofertas__productos__precio">$330</p>
+                    <p class= "ofertas__productos__precio"><span class="tachado">$460</span> $330</p>
                     <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
@@ -102,7 +165,7 @@
                     <img class="ofertas--imagen" src="./img/catalogo/gingordon.png" alt="Gin gordon ">
                     <p class="oferta__productos--texto">Gin Gordon</p>
                     <p class="oferta__productos--capacidad">700cc</p>
-                    <p class= "ofertas__productos__precio">$2199</p>
+                    <p class= "ofertas__productos__precio"><span class="tachado">$2300</span> $2199</p>
                     <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
@@ -153,5 +216,6 @@
             </section>
         </footer>
     </div>
+    <script src="./js/bootstrap.js"></script>
 </body>
 </html>

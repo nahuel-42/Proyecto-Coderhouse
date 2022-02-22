@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/6254e1665b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,24 +16,36 @@
 <body>
     <div class="estructura">
         <header>
-            <nav>
-                <div class="logo">
-                    <a  href="/index.html"><img class="imag__logo"src="../img/LOGO.png" alt=""></a>
+            <nav class="navbar navbar-expand-lg bg-white">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="../index.html"><img class="imag__logo" src="../img/LOGO.png" alt="Logo MQ BEBIDAS"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto mb-2 mb-lg-0 align-items-center">
+                            <li>
+                                <a class="nav-link menu__link" aria-current="page" href="comocomprar.html">Como Comprar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu__link" aria-current="page" href="catalogo.html ">Catalogo</a>
+                            </li>
+                            <li>
+                                <a class="nav-link menu__link" aria-current="page" href="zonasentrega.html">Zona de entregas</a>
+                            </li>
+                            <li>
+                                <a class="nav-link menu__link" aria-current="page" href="contacto.html">Contacto</a>
+                            </li>
+                            <li>
+                                <a class="nav-link menu__link border-left menu__iniciasesion"  id="menu--iniciasesion"aria-current="page" href="contacto.html">Iniciar sesión</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " aria-current="page" href="contacto.html"><i class="fa-solid fa-cart-shopping menu--carrito"></i></a>
+                            </li>
+                        </ul>
+                  </div>
                 </div>
-                <ul class="menu">
-                <li><a class="menu__link" href="comocomprar.html">Como Comprar</a></li>
-                <li><a class="menu__link" href="catalogo.html">Catálogo</a></li>
-                <li><a class="menu__link" href="zonasentrega.html">Zonas de entrega</a></li>
-                <li><a class="menu__link" href="contacto.html">Contacto</a></li>
-                <li>
-                    <div class="menu__iniciasesion">
-                        <a class="menu__link" id="menu--iniciasesion" href="contacto.html">Iniciar sesión</a>
-                    </div>
-                </li>
-                <li>
-                    <a class="menu--carrito"  href="contacto.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-            </nav>
+              </nav>
         </header>
         <main>
             <Section class="main__zonaentrega">
@@ -39,8 +53,22 @@
                     <h1 class="main--titulo">Conoce nuestra zona de cobertura en Mar del Plata!</h1>
                     <br>
                     <h2 class="main--subtitulo" > Si no estas dentro de la zona siempre podes retirarlo gratis en alguna de nuestras sucursales.</h2>
+                    <p class="h3 mt-5">Sucursales:</p>
+                        <div class="container-fluid "> 
+                            <div class="row">
+                              <div class="col-md-4 h6 d-flex justify-content-center align-items-center">
+                                <p>San Martin 1615</p>
+                              </div>
+                              <div class="col-md-4 h6 d-flex justify-content-center align-items-center">
+                                <p>Av. Luro 5501</p>
+                              </div>
+                              <div class="col-md-4  h6 d-flex justify-content-center align-items-center">
+                                <p>Av. Vertiz 2513</p>
+                              </div>
+                            </div>
+                          </div>
                 </div>
-                <img class="main--mapa" src="../img/Mapa.png" alt="Mapa de alcance de entregas">
+                <img class="main--mapa" src="../img/Mapa.jpg" alt="Mapa de alcance de entregas">
             </Section>
         </main>
         <footer >
@@ -87,4 +115,5 @@
         </footer>
     </div>
 </body>
+<script src="../js/bootstrap.js"></script>
 </html>

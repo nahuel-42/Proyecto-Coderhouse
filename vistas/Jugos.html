@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Catalogo</title>
     <link rel="stylesheet" href="../css/estilo.css" /><!--codigo -->
 </head>
 <body>
@@ -47,19 +47,50 @@
                 </div>
               </nav>
         </header>
-        <main><!--No consigo dar con una estetica que me guste asi que aplique un formato y alineacion temporal -->
-            <section class="main__contactos">
-                <h1 class="main--titulo">Contactenos</h1>
-                <form class="main__formulario" action="" method="get" enctype="text/plain">
-                    <input type="text" name="" id="" placeholder="Nombre y Apellido*" required><br>
-                    <input type="tel" name="" id=""placeholder="Telefono*" required><br>
-                    <input type="email" name="" id=""placeholder="Email*"><br>
-                    <h2 class="main--subtitulo">Ingrese su consulta:</h2>
-                    <input class="main__formulario_escribir" type="text" name="" id="" required><br>
-                    <input type="submit" value="Enviar Consulta" maxlength="255" >
-                    <h2 class="main--subtitulo">* Campos obligatorios</h2>
-                </form>
-            </section>
+        <main>
+                <section class="catalogo">
+                    <h1 class="catalogo__indice">INICIO/CATALOGO</h1>
+                    <div class="catalogo__filtro">
+                        Ordenar por:
+                        <select class="catalogo__desplegable" name="Ordenamiento">
+                            <option>Precio de menor a mayor</option>
+                            <option>Precio de mayor a menor</option>
+                            <option>Nuevos productos</option>
+                        </select>
+                    </div>
+                    <div class="busqueda">
+                        <input class="catalogo__inputbusqueda" type="search" placeholder="Busca tu bebida..." size="30"> 
+                        <input class="catalogo__inputsubmit" type="submit" value="BUSCAR">
+                    </div>
+                    <div class="catalogo__categoria"> 
+                        <h2 class="titulo--categoria">CATEGORÍA</h2>
+                        <ul class="listaproductos">
+                            <li><a class="categorias" href="../vistas/Vinos.html">Vinos</a></li>
+                            <li><a class="categorias" href="../vistas/Gaseosas.html">Gaseosas</a></li>
+                            <li><a class="categorias" href="../vistas/Cervezas.html">Cervezas</a></li>
+                            <li><a class="categorias" href="../vistas/Vermouths.html">Vermouths</a></li>
+                            <li><a class="categorias" href="../vistas/Jugos.html">Jugos</a></li>
+                            <li><a class="categorias" href="../vistas/Destiladas.html">Destiladas</a></li>
+                            <li><a class="categorias" href="../vistas/Licores.html">Licores</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="bannercategoria">
+                        <h1>Jugos</h1>
+                    </div>
+                    <section class="productos">
+                        <div class=ofertas__productos>    
+                            <img class="ofertas--imagen" src="../img/catalogo/citric.png" alt="Jugo citric ">
+                            <p class="oferta__productos--texto">Jugo citric</p>
+                            <p class="oferta__productos--capacidad">1 L</p>
+                            <p class= "ofertas__productos__precio"><span class="tachado">$270</span> $189</p>
+                            <a class="ofertas__productos__boton" href="./vistas/comocomprar.html"></a>
+                            <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
+                        </div>
+                        
+                    </section>
+                    
+                </section>
         </main>
         <footer >
             <section class="pie">

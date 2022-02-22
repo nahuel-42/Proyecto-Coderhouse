@@ -1,8 +1,8 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    line-height: 1.6;
+    margin:0 ; 
+    padding:0 ;
+    box-sizing: border-box ;
+    line-height: 1.6rem ;
 }
 /*Barra de navegacion*/
 header{
@@ -80,11 +80,34 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.patagoniabanner{
-    width: 100%;
-}
 /*PRINCIPAL*/
+.fondo__banner{
+    background-color: rgb(73, 73, 73);
+}
 
+.banner__iconos{
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.banner__texto1{
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: rgb(219, 219, 219);
+}
+.banner__texto2{
+    font-size: 0.8rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+    color: rgb(219, 219, 219);
+}
+.imperdibles{
+    margin: 1rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+}
 .ofertas--titulo{
     margin: auto;
     background-size: 100%;
@@ -98,10 +121,11 @@ body{
     margin:0 auto;
     width: 100%;
     grid-template-columns: repeat(4,210px);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
     grid-column-gap: 30px;
     justify-content: center;
 }
+
 .ofertas__productos{
     margin-bottom: 1.5rem;
     display: grid;
@@ -117,8 +141,15 @@ body{
     font-family: 'Open Sans', sans-serif;
     border: 1px solid rgb(201, 197, 197);
     border-radius: 0px;
-    background-color: #fffdf8;
+    background-color: #ffffff;
     transition:0.5s;
+    max-height: 430px;
+}
+.tachado{
+    text-decoration:line-through;
+    color: #777777;
+    font-size: 1rem;
+    align-self: start;
 }
 .ofertas__productos:hover{
     transform:scale(105%);
@@ -149,6 +180,7 @@ body{
     color: #ff2525;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    margin: 0;
 }
 .ofertas__productos__input{
     width: 40%;
@@ -168,7 +200,7 @@ body{
     border-radius: 0px;
     width: 80%;
     height: 50%;
-    background-color: #ff0a0a;
+    background-color: #ff9d00;
     position: relative;
     overflow: hidden;
 }
@@ -216,33 +248,27 @@ body{
     background-image: url(../img/oferta1.png);
     background-repeat: no-repeat;
     background-size: 45%;
-}
-
-
-.CervezasArtesanales{
-    width: 100%;
-    min-height: 50px;
-    background-image: url(/img/fondoartesanal.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    margin-top: 1rem;
 }
 
 /*CATALOGO*/
 
-
-
 .catalogo{
     display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows:  1fr 1fr auto;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:  1fr  1fr 2fr auto;
     grid-template-areas: "indice        filtro"
-                         "categoria     busqueda"
-                         "lista         productos";
+                        "categoria     busqueda"
+                         "categoria     bannercategoria"
+                         "categoria         productos";
     justify-items: center;
     grid-row-gap: 0.5rem;
-    margin: 2rem  12rem;
+    margin: 2rem  ;
 }
-
+.catalogo__categoria{
+    justify-self:center;
+    grid-area:categoria;
+}
 .catalogo__filtro{
     grid-area: filtro;
     justify-self: end;
@@ -265,33 +291,36 @@ body{
     color: black;
     font-family: 'Open Sans';
     font-weight: 400;
-    justify-self: start;
+    justify-self: self-start;
+    margin-left: 3rem;
 }
+
 .busqueda{
     grid-area: busqueda;
     align-self: center;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-self: start;
 
 }
 .catalogo__inputbusqueda{
     font-size: 1rem;
     font-family: 'Roboto';
     font-weight: 500;
-    border: 2px solid rgb(207, 0, 0);
+    border: 2px solid rgb(41, 41, 41);
     border-right: 0ch;
-    height: 2rem;
+    height: 2.6rem;
     width: 52rem;
     padding-left: 15px;
 }
 .catalogo__inputsubmit{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Roboto';
     font-weight: 400;
     width: 6rem;
-    height: 2rem;
-    border: 2px solid rgb(207, 0, 0);
+    height: 2.6rem;
+    border: 2px solid rgb(41, 41, 41);
     border-left: 0;
     background-color: #ffffff;
 }
@@ -299,16 +328,18 @@ body{
     background-color: #e7e7e7;
 }
 .titulo--categoria{
-    grid-area:categoria;
     font-family: 'Raleway';
-    font-size: 1.3rem;
-    align-self: flex-end;
+    font-size: 1.5rem;
+    align-self: start;
     justify-self: start;
+    margin: 1rem 0rem 1rem   2rem ;
 }
 .listaproductos{
     grid-area: lista;
     list-style-image: url(../img/iconovineta.png);
     list-style-position: inside;
+    
+
 }
 .categorias{
     font-size: 1.2rem;
@@ -319,16 +350,22 @@ body{
     font-weight: 500;
     justify-self: start;
     transition:0s;
+    line-height: 2rem ;
 }
 .categorias:hover{
     color: rgb(14, 14, 14);
     font-size: 1.1rem;
 }
-/*CONTACTO*/
-.main__contactos{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+
+.bannercategoria{
+    grid-area: bannercategoria;
+    width: 57rem;
+    text-align: center;
+    justify-self: start;
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    background-color: #e7e7e7;
+    padding: 1rem;
 }
 .productos{
     grid-area: productos;
@@ -338,7 +375,24 @@ body{
     grid-template-columns: repeat(4,210px);
     grid-template-rows: repeat(3,1fr);
     grid-column-gap: 30px;
+    justify-content: start;
+}
+.catalogo__categoria{
+    background-color: white;
+    border: 1px solid rgb(201, 197, 197);
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*CONTACTO*/
+.main__contactos{
+    display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .main__formulario{
     margin: auto;
@@ -474,6 +528,9 @@ footer h2{
         flex-direction: column;
     }  
     
+    .menu__link{
+        margin:0;
+    }
     .main--mapa{
         border-radius: 15px;
         width: 80%;
@@ -482,12 +539,19 @@ footer h2{
     .main--titulo{
         font-size: 1.5rem;
     }
-    .imagenbuscador{
+    .catalogo__inputbusqueda {
+        width: 80%;
+    }
+    .busqueda{
         width: 100%;
     }
     .categorias{
     
         font-size: 1rem;
+    }
+    
+    .ofertas{
+        grid-template-columns: repeat(3,210px);
     }
     .productos{
         grid-template-columns: repeat(2,210px);
@@ -498,18 +562,46 @@ footer h2{
     
     }
     .catalogo{
-        grid-template-columns: 1fr 4fr;
-        grid-template-rows: 0.5fr 12fr;
-        grid-row-gap: 10px;
+        margin: 0;
+    }
+    .listaproductos{
+        padding: 0;
+        list-style-position: initial;
+    }
+    .productos{
+        grid-template-columns: repeat(2,210px);
+        grid-template-rows: repeat(3,1fr);
+        grid-column-gap: 30px;
+        justify-content: center;
+    
+    
+    }
+    .categorias{
+    
+        font-size: 1rem;
+    }
+    .bannercategoria{
+        width: 100%;
+    }
+    
+    .catalogo__categoria{
+        height: 100%;
+        width: 100%;
+    }
+    .menu__iniciasesion {
+        border-left: 0;
     }
 }
 @media  (max-width: 480px){
     main {
         min-height: 0;
     }
+    header{
+        padding: 0;
+    }
     .imag__logo{
-        width: 250px;
-        margin-left: 25px;
+        width: 225px;
+        margin: 5px;
     }
 
     nav{
@@ -520,8 +612,10 @@ footer h2{
     .menu{
         flex-direction:column;
     }
-    
-    .Menu__IniciaSesion{
+    .menu__link{
+        margin:0;
+    }
+    .menu__iniciasesion {
         border-left: 0;
     }
     
@@ -531,10 +625,19 @@ footer h2{
 
     .catalogo{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3,auto);
-        grid-template-areas: "busqueda" "lista" "productos";
+        grid-template-rows: repeat(6,auto);
+        grid-template-areas: "indice" "filtro" "categoria"  "busqueda" "bannercategoria" "productos";
     }
-
+    .catalogo__indice{
+        margin: 0;
+    }
+    .catalogo__inputbusqueda {
+        width: 60%;
+    }
+    .listaproductos{
+        padding: 0;
+        list-style-position: initial;
+    }
     .productos{
         grid-template-columns: repeat(1,210px);
         grid-template-rows: repeat(7,1fr);
@@ -547,8 +650,7 @@ footer h2{
     
         font-size: 1rem;
     }
-
-    .imagenbuscador{
+    .bannercategoria{
         width: 100%;
     }
 
