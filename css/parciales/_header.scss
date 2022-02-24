@@ -1,0 +1,49 @@
+header{
+    padding: 0.7rem 2rem;
+    background-color: rgb(255, 255, 255);
+    nav{
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        .menu__link{
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: rgb(65, 65, 65);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+            margin: 1rem;
+        }
+        .menu__link:hover{
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+        }   
+        #menu__iniciasesion{
+            color: #fb9c17;
+            border-left: 1px solid rgb(46, 46, 46);
+        }
+        
+        #menu--iniciasesion:hover{
+            color: red;
+            font-weight: 600;
+        }
+        .menu--carrito{
+            box-sizing: content-box;
+            font-size: 1.5rem;
+            color: #ffffff;
+            border-radius: 100%;
+            background-color: rgb(255, 15, 15);
+            padding: 0.6rem 0.8rem;
+            transition: 0.1s;
+        }
+        .menu--carrito:hover{
+            font-size: 1.5rem;
+            color: #ff1c1c;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(201, 8, 8);
+            padding: 0.6rem 0.8rem;
+        }
+    }
+}

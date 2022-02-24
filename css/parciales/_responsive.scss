@@ -1,1 +1,182 @@
 
+@media  screen and (max-width: 768px){
+    nav{
+        flex-direction:column ;
+    }
+    .imag__logo{
+        width: 400px;
+        margin-left: 25px;
+    }
+    .menu{
+        margin: 0;
+    }
+    
+    .main__zonaentrega{
+        flex-direction: column;
+    }  
+    
+    .menu__link{
+        margin:0;
+    }
+    .main--mapa{
+        border-radius: 15px;
+        width: 80%;
+        margin: 30px;
+    } 
+    .main--titulo{
+        font-size: 1.5rem;
+    }
+    .catalogo__inputbusqueda {
+        width: 80%;
+    }
+    .busqueda{
+        width: 100%;
+    }
+    .categorias{
+    
+        font-size: 1rem;
+    }
+    
+    .ofertas{
+        grid-template-columns: repeat(3,210px);
+    }
+    .productos{
+        grid-template-columns: repeat(2,210px);
+        grid-template-rows: repeat(4,1fr);
+        grid-column-gap: 30px;
+        justify-content: center;
+    
+    
+    }
+    .catalogo{
+        margin: 0;
+    }
+    .listaproductos{
+        padding: 0;
+        list-style-position: initial;
+    }
+    .productos{
+        grid-template-columns: repeat(2,210px);
+        grid-template-rows: repeat(3,1fr);
+        grid-column-gap: 30px;
+        justify-content: center;
+    
+    
+    }
+    .categorias{
+    
+        font-size: 1rem;
+    }
+    .bannercategoria{
+        width: 100%;
+    }
+    
+    .catalogo__categoria{
+        height: 100%;
+        width: 100%;
+    }
+    .menu__iniciasesion {
+        border-left: 0;
+    }
+}
+@media  (max-width: 480px){
+    main {
+        min-height: 0;
+    }
+    header{
+        padding: 0;
+    }
+    .imag__logo{
+        width: 225px;
+        margin: 5px;
+    }
+
+    nav{
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu{
+        flex-direction:column;
+    }
+    .menu__link{
+        margin:0;
+    }
+    .menu__iniciasesion {
+        border-left: 0;
+    }
+    
+
+    .catalogo{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,auto);
+        grid-template-areas: "indice" 
+                        "filtro" 
+                         "categoria" 
+                         "busqueda"
+                          "bannercategoria"
+                           "productos";
+    }
+    .catalogo__indice{
+        grid-area: indice;
+        margin: 0;
+    }
+    .catalogo__filtro{
+        grid-area: filtro;
+    }
+    .catalogo__categoria{
+        grid-area:categoria;
+    }
+    .busqueda{
+        grid-area: busqueda;
+    }
+    .bannercategoria{
+        grid-area: bannercategoria;
+    }
+    .catalogo__inputbusqueda {
+        width: 60%;
+    }
+    .listaproductos{
+        padding: 0;
+        list-style-position: initial;
+    }
+    .productos{
+        grid-area:productos;
+        grid-template-columns: repeat(1,210px);
+        grid-template-rows: repeat(7,1fr);
+        grid-column-gap: 30px;
+        justify-content: center;
+    }
+    .categorias{
+    
+        font-size: 1rem;
+    }
+    .bannercategoria{
+        width: 100%;
+    }
+
+    .ofertas{
+        grid-template-columns: repeat(1,210px);
+        grid-template-rows: repeat(7,1fr);
+    }
+    
+    .main__zonaentrega{
+        flex-direction: column;
+    }  
+    
+    .main--mapa{
+        border-radius: 15px;
+        width: 90%;
+    } 
+    .main--titulo{
+        font-size: 1.5rem;
+    }
+    .pie{
+        flex-direction: column;
+    }
+    
+    .pie__apps{
+        flex-direction: column;
+        align-items: center;
+    }
+}

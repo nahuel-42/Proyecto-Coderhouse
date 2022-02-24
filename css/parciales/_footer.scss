@@ -1,0 +1,54 @@
+footer{
+    background-color:rgb(255, 255, 255) ;
+    color:#7A7A7B;
+    font-family: 'Roboto', sans-serif;
+    h2{
+        color: rgb(51, 51, 51);
+        font-weight: bold;
+    } 
+   .pie{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        &__columna{
+            margin: 2rem;  
+            h2{
+                margin-bottom: 0.5rem;
+            }
+            .pie__lista{
+                list-style-type: none;
+                .pie__items{
+                    text-decoration: none;
+                    color:#7A7A7B;
+                }
+            }
+        }
+    }
+    .pie__apps{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+        border-top: 1px solid #a09c9c;
+        justify-content: space-around;
+        padding: 1.5rem;
+        .pie__redes{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            &--iconos{
+                max-height: 45px;
+                padding: 0.4rem;
+            }
+        }
+        .pie--aplicaciones{
+            max-height: 40px;
+        }
+    }
+    .pie__derechos{
+        border-top: 1px solid #a09c9c;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+}
