@@ -1,182 +1,165 @@
-
-/*INDEX*/
-
-
-body{
-    background-color: #f1f1f1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    main{
-        min-height: 100vh;  
-        .fondo__banner{
-            background-color: rgb(73, 73, 73);          
-            .banner__iconos{
-                font-size: 3rem;
-                color: #ffffff;                      
-                &__texto1{
-                    font-family: "Open Sans";
-                    font-weight: 500;
-                    font-size: 1.3rem;
-                    color: rgb(219, 219, 219);
-                }
-                &__texto2{
-                    font-size: 0.8rem;
-                    font-family: "Open Sans";
-                    font-weight: 400;
-                    color: rgb(219, 219, 219);
-                }
-            }
-        }
-        .imperdibles{
-            margin: 1rem;
-            font-size: 2.5rem;
-            font-weight: 500;
+@import "./_variables.scss";
+main{
+    min-height: 100vh; 
+    background-color: map-get($colores,gris-claro);     
+}
+.fondo__banner{
+    background-color: rgb(73, 73, 73);          
+    .banner__iconos{
+        font-size: 3rem;               
+        color: white;
+    }
+    .banner__texto1{
+        font-family: "Open Sans";
+        font-weight: 500;
+        font-size: 1.3rem;
+        color: rgb(219, 219, 219);
+    }
+    .banner__texto2{
+        font-size: 0.8rem;
+        font-family: "Open Sans";
+        font-weight: 400;
+        color: rgb(219, 219, 219);
+    }
+}
+.imperdibles{
+    margin: 1rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.ofertas{
+    display: grid;
+    margin:0 auto;
+    width: 100%;
+    grid-template-columns: repeat(4,210px);
+    grid-template-rows: repeat(2,1fr);
+    grid-column-gap: 30px;
+    justify-content: center;
+    &__productos{
+        margin-bottom: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 5fr 1fr 1fr 1fr 2fr;
+        grid-template-areas: "foto        foto"
+                            "descripcion descripcion"
+                            "capacidad   capacidad"
+                            "precio      precio"
+                            "imput     comprar";
+        justify-items: center;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+        border: 1px solid rgb(201, 197, 197);
+        border-radius: 0px;
+        background-color: #ffffff;
+        transition:0.5s;
+        max-height: 430px;
+        .oferta__productos--texto{
+            grid-area: descripcion; 
+            font-size: 1.2rem;
+            font-weight: 400;
             text-align: center;
+            border-radius: 5px;
+            color: rgb(50,50,50);
+            font-family: 'Open Sans', sans-serif;
+            line-height : 1.2rem;
         }
-        .ofertas{
-            display: grid;
-            margin:0 auto;
-            width: 100%;
-            grid-template-columns: repeat(4,210px);
-            grid-template-rows: repeat(2,1fr);
-            grid-column-gap: 30px;
-            justify-content: center;
-            &__productos{
-                margin-bottom: 1.5rem;
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                grid-template-rows: 5fr 1fr 1fr 1fr 2fr;
-                grid-template-areas: "foto        foto"
-                                    "descripcion descripcion"
-                                    "capacidad   capacidad"
-                                    "precio      precio"
-                                    "imput     comprar";
-                justify-items: center;
-                align-items: center;
-                font-family: 'Open Sans', sans-serif;
-                border: 1px solid rgb(201, 197, 197);
-                border-radius: 0px;
-                background-color: #ffffff;
-                transition:0.5s;
-                max-height: 430px;
-                &--texto{
-                    grid-area: descripcion; 
-                    font-size: 1.2rem;
-                    font-weight: 400;
-                    text-align: center;
-                    border-radius: 5px;
-                    color: rgb(50,50,50);
-                    font-family: 'Open Sans', sans-serif;
-                    line-height : 1.2rem;
-                }
-                &--capacidad{
-                    grid-area: capacidad;
-                    font-size: 0.8rem;
-                    font-weight: 500;
-                    font-family: 'Open Sans', sans-serif;
-                    color: rgb(50,50,50);
-                }
-                &__precio{
-                    grid-area: precio;
-                    font-size: 1.6rem;
-                    border-radius: 5px;
-                    color: #ff2525;
-                    font-family: 'Open Sans', sans-serif;
-                    font-weight: 600;
-                    margin: 0;      
-                    .tachado{
-                        text-decoration:line-through;
-                        color: #777777;
-                        font-size: 1rem;
-                        align-self: start;
-                    }
-                }
-                &__input{
-                    grid-area: imput;
-                    width: 40%;
-                    height: 50%;
-                    line-height: 1.65;
-                    display: block;
-                    padding-left: 8px;
-                    justify-self:end;
-                    margin-right: 11px;
-                    font-family: 'Open Sans';
-                }
-                
-                &__boton{
-                    grid-area: comprar;
-                    display: flex;
-                    align-items: center;
-                    border-radius: 0px;
-                    width: 80%;
-                    height: 50%;
-                    background-color: #ff9d00;
-                    position: relative;
-                    overflow: hidden;
-                }
-                &__boton::before{
-                    content: 'Comprar';
-                    font-size: 0.9rem;
-                    font-weight: 200;
-                    text-align: center;
-                    text-decoration: none;
-                    font-weight: 500;
-                    color: rgb(255, 255, 255);
-                    font-family: 'Raleway', sans-serif;
-                    position: absolute;
-                    width: 100%;
-                    transition:all 0.2s ease-in-out;
-                }
-                
-                &__boton::after{
-                    content: "\f07a";
-                    text-decoration: none;
-                    color: rgb(255, 255, 255);
-                    font-family: 'FontAwesome';
-                    text-align: center;
-                    position: absolute;
-                    width: 100%;
-                    opacity: 1;
-                    font-size: 1.3rem;
-                    transform: translate(0%,200%);
-                    transition:all 0.2s ease-in-out;
-                }
-                &__boton:hover::before{
-                    opacity: 0;
-                    transform: translate(0%,-100%);
-                }
-                &__boton:hover::after{
-                    opacity: 1;
-                    transform: translate(0%,0%);
-                
-                }
-                .ofertas--imagen{
-                    grid-area: foto;
-                    width: 180px;
-                    height: 180px;
-                    background-image: url(../img/oferta1.png);
-                    background-repeat: no-repeat;
-                    background-size: 45%;
-                    margin-top: 1rem;
-                }
+        .oferta__productos--capacidad{
+            grid-area: capacidad;
+            font-size: 0.8rem;
+            font-weight: 500;
+            font-family: 'Open Sans', sans-serif;
+            color: rgb(50,50,50);
+        }
+        &__precio{
+            grid-area: precio;
+            font-size: 1.6rem;
+            border-radius: 5px;
+            color: map-get($colores,rojo);
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            margin: 0;      
+            .tachado{
+                text-decoration:line-through;
+                color: map-get($colores,gris-semiclaro);
+                font-size: 1rem;
+                align-self: start;
             }
-            &__productos:hover{
-                transform:scale(105%);
-                box-shadow: 0 0 10px rgb(117, 117, 117);
-            }
-            
-            
+        }
+        &__input{
+            grid-area: imput;
+            width: 40%;
+            height: 50%;
+            line-height: 1.65;
+            display: block;
+            padding-left: 8px;
+            justify-self:end;
+            margin-right: 11px;
+            font-family: 'Open Sans';
         }
         
+        &__boton{
+            grid-area: comprar;
+            display: flex;
+            align-items: center;
+            border-radius: 0px;
+            width: 80%;
+            height: 50%;
+            background-color: map-get($colores,naranja);
+            position: relative;
+            overflow: hidden;
+        }
+        &__boton::before{
+            content: 'Comprar';
+            font-size: 0.9rem;
+            font-weight: 200;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+            font-family: 'Raleway', sans-serif;
+            position: absolute;
+            width: 100%;
+            transition:all 0.2s ease-in-out;
+        }
+        
+        &__boton::after{
+            content: "\f07a";
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-family: 'FontAwesome';
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            opacity: 1;
+            font-size: 1.3rem;
+            transform: translate(0%,200%);
+            transition:all 0.2s ease-in-out;
+        }
+        &__boton:hover::before{
+            opacity: 0;
+            transform: translate(0%,-100%);
+        }
+        &__boton:hover::after{
+            opacity: 1;
+            transform: translate(0%,0%);
+        
+        }
+        .ofertas--imagen{
+            grid-area: foto;
+            width: 180px;
+            height: 180px;
+            background-image: url(../img/oferta1.png);
+            background-repeat: no-repeat;
+            background-size: 45%;
+            margin-top: 1rem;
+        }
     }
-    
+    &__productos:hover{
+        transform:scale(105%);
+        box-shadow: 0 0 10px rgb(117, 117, 117);
+    }
 }
-
-
-
-
-
 .catalogo{
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -187,15 +170,27 @@ body{
                          "categoria         productos";
     justify-items: center;
     grid-row-gap: 0.5rem;
-    margin: 2rem  ;
+    margin: 2rem;
     &__indice{
         grid-area:indice;
-        font-size: 1rem;
-        color: black;
+        @include centrado-flex-fila;
+        align-items: center;
         font-family: 'Open Sans';
-        font-weight: 400;
         justify-self: self-start;
+        
+    }
+    &__inicio{
+        font-size: 1rem;
+        color: map-get($colores,gris-oscuro);
+        text-decoration: none;
+        font-weight: 400;
         margin-left: 3rem;
+    }
+    &__catalogo{
+        font-size: 1rem;
+        color: map-get($colores,gris-oscuro);
+        font-weight: 600;
+        padding: 0;
     }
     &__filtro{
         grid-area:filtro;
@@ -211,7 +206,6 @@ body{
             font-weight: 400;
             height: 1.8rem;
         }
-
     }
     .busqueda{
         grid-area:busqueda;
@@ -224,7 +218,7 @@ body{
             font-size: 1rem;
             font-family: 'Roboto';
             font-weight: 500;
-            border: 2px solid rgb(41, 41, 41);
+            border: 2px solid map-get($colores,gris-medio);
             border-right: 0ch;
             height: 2.6rem;
             width: 52rem;
@@ -236,7 +230,7 @@ body{
             font-weight: 400;
             width: 6rem;
             height: 2.6rem;
-            border: 2px solid rgb(41, 41, 41);
+            border: 2px solid map-get($colores,gris-medio);
             border-left: 0;
             background-color: #ffffff;
         }
@@ -245,15 +239,13 @@ body{
         }
     }
     &__categoria{
+        @include centrado-flex-columna;
         justify-self:center;
         grid-area:categoria;
         background-color: white;
         border: 1px solid rgb(201, 197, 197);
         height: 300px;
         width: 250px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         .titulo--categoria{
             font-family: 'Raleway';
             font-size: 1.5rem;
@@ -269,7 +261,7 @@ body{
                 font-size: 1.2rem;
                 text-decoration: none;
                 font-weight: bold;
-                color: rgb(65, 65, 65);
+                color: map-get($colores,gris-semioscuro);
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 500;
                 justify-self: start;
@@ -277,11 +269,9 @@ body{
                 line-height: 2rem ;
             }
             .categorias:hover{
-                color: rgb(14, 14, 14);
-                font-size: 1.1rem;
+                color: map-get($colores,gris-oscuro);
+                font-size: 1.3rem;
             }            
-    
-
         }
     }
     .bannercategoria{
@@ -305,36 +295,30 @@ body{
         justify-content: start;
     }
 }
-
 /*CONTACTO*/
-
 .main__contactos{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    .main--titulo{
+    @include centrado-flex-columna;
+    &--titulo{
         font-size: 2.5rem;
         font-family: 'Open Sans', sans-serif;
         text-align: center;
         margin:1rem;
-        .main__formulario{
-            margin: auto;          
-            .main__formulario_escribir{
-                min-height: 5rem;
-            }
+    }
+    &__formulario{
+        margin: auto;          
+        &__formulario_escribir{
+            min-height: 5rem;
         }
     }
-
 }
-/*ZONAS DE ENTREGA*/
+/*ZONAS DE ENTREGA*/ 
 .main__zonaentrega{
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;    
     .main__textosmapa{
-        display: flex;
-        flex-direction: column; 
+        @include centrado-flex-columna;
         .main--subtitulo{
             font-size: 1rem;
             font-family: 'Open Sans', sans-serif;
@@ -345,17 +329,13 @@ body{
         border-radius: 15px;
     }
 }
-
-
 .estructura{
     display: grid;
     grid-template-rows: auto 1fr auto auto;
 }
-
 /*COMO COMPRAR*/
 .main__comocomprar{
-    display: flex;
-    flex-direction: column;
+    @include centrado-flex-columna;
     align-content: center;
     align-items: center;
     .main__bloque{

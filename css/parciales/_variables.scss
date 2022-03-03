@@ -1,0 +1,20 @@
+$colores: (
+    "gris-claro": #f1f1f1,
+    "gris-semiclaro":#777777,
+    "gris-medio":#616161,
+    "gris-semioscuro": #414141,
+    "gris-oscuro": #141414,
+    "naranja": #ff9d00,
+    "rojo": #ff2525,
+);
+@mixin centrado-flex-columna {
+    display: flex;
+    flex-direction: column;
+    justify-content:center
+}
+@mixin centrado-flex-fila {
+    display: flex;
+    flex-direction: row;
+    justify-content:center
+}
+
