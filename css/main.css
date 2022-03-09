@@ -5,9 +5,20 @@
   line-height: 1.6rem;
 }
 
+.banner_superior {
+  background-color: #000000;
+  border-radius: 0px 0px 15px 15px;
+  font-family: "Arial";
+  font-size: 1rem;
+  height: 2rem;
+  color: white;
+}
+
 header {
-  padding: 0.7rem 2rem;
+  padding: 0.3rem 2rem;
   background-color: white;
+  box-shadow: 0px 15px 10px -15px #030202;
+  z-index: 1;
 }
 
 header nav {
@@ -23,43 +34,44 @@ header nav .menu__link, header nav .menu__iniciasesion {
   font-size: 1rem;
   text-decoration: none;
   font-weight: bold;
-  color: #414141;
+  color: black;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   margin: 1rem;
+  padding: 0.1rem;
 }
 
 header nav .menu__link:hover, header nav .menu__iniciasesion:hover {
-  color: black;
+  color: #363636;
   font-weight: 600;
+  border-bottom: 1px solid #414141;
 }
 
 header nav .menu__iniciasesion {
-  color: #fb9c17;
   border-left: 1px solid #2e2e2e;
 }
 
 header nav .menu__iniciasesion:hover {
-  color: red;
+  color: #313131;
   font-weight: 600;
+  border-bottom: 0;
 }
 
 header nav .menu--carrito {
   box-sizing: content-box;
   font-size: 1.5rem;
-  color: #ffffff;
-  border-radius: 100%;
-  background-color: #ff0f0f;
+  color: #f44708;
+  border-radius: 50%;
   padding: 0.6rem 0.8rem;
-  transition: 0.1s;
+  transition: 0.3s;
 }
 
 header nav .menu--carrito:hover {
   font-size: 1.5rem;
-  color: #ff1c1c;
-  background-color: white;
-  border: 1px solid #c90808;
-  padding: 0.6rem 0.8rem;
+  color: #ffffff;
+  background-color: #f44708;
+  border: 1px solid #414141;
+  padding: 0.6rem 0.8rem 0.6rem 0.7rem;
 }
 
 main {
@@ -67,27 +79,53 @@ main {
   background-color: #f1f1f1;
 }
 
+.boton_entrar {
+  background-color: #FB8500;
+  border: 0;
+}
+
+.fecha__input {
+  line-height: 1.65;
+  font-family: 'Open Sans';
+}
+
+.popup {
+  height: 1000px;
+  width: 600px;
+  margin: auto;
+  margin-top: 300px;
+}
+
 .fondo__banner {
-  background-color: #494949;
+  background-color: #f2f2f2;
+  height: 150px;
 }
 
 .fondo__banner .banner__iconos {
   font-size: 3rem;
-  color: white;
+  color: #2c2c2c;
 }
 
 .fondo__banner .banner__texto1 {
   font-family: "Open Sans";
   font-weight: 500;
   font-size: 1.3rem;
-  color: #dbdbdb;
+  color: #023047;
 }
 
 .fondo__banner .banner__texto2 {
   font-size: 0.8rem;
   font-family: "Open Sans";
   font-weight: 400;
-  color: #dbdbdb;
+  color: #023047;
+}
+
+.fondo__banner .fila_envios {
+  border: 1px solid #023047;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  width: 70%;
+  background-color: #ffffff;
 }
 
 .imperdibles {
@@ -97,11 +135,15 @@ main {
   text-align: center;
 }
 
+.linea {
+  height: 1px;
+}
+
 .ofertas {
   display: grid;
   margin: 0 auto;
   width: 100%;
-  grid-template-columns: repeat(4, 210px);
+  grid-template-columns: repeat(4, 250px);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 30px;
   justify-content: center;
@@ -116,7 +158,7 @@ main {
   justify-items: center;
   align-items: center;
   font-family: 'Open Sans', sans-serif;
-  border: 1px solid #c9c5c5;
+  border: 2px solid #e8e8e8;
   border-radius: 0px;
   background-color: #ffffff;
   transition: 0.5s;
@@ -146,9 +188,9 @@ main {
   grid-area: precio;
   font-size: 1.6rem;
   border-radius: 5px;
-  color: #ff2525;
+  color: black;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -178,7 +220,7 @@ main {
   border-radius: 0px;
   width: 80%;
   height: 50%;
-  background-color: #ff9d00;
+  background-color: #FB8500;
   position: relative;
   overflow: hidden;
 }
@@ -227,7 +269,7 @@ main {
   height: 180px;
   background-image: url(../img/oferta1.png);
   background-repeat: no-repeat;
-  background-size: 45%;
+  background-size: 30%;
   margin-top: 1rem;
 }
 
@@ -238,12 +280,12 @@ main {
 
 .catalogo {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2.3fr;
   grid-template-rows: 1fr  1fr 2fr auto;
   grid-template-areas: "indice        filtro" "categoria     busqueda" "categoria     bannercategoria" "categoria         productos";
   justify-items: center;
   grid-row-gap: 0.5rem;
-  margin: 2rem;
+  margin-top: 1rem;
 }
 
 .catalogo__indice {
@@ -273,11 +315,13 @@ main {
 
 .catalogo__filtro {
   grid-area: filtro;
-  justify-self: end;
   font-size: 1rem;
   color: black;
   font-family: 'Open Sans';
   font-weight: 400;
+  position: absolute;
+  margin: 1rem;
+  left: 1100px;
 }
 
 .catalogo__filtro .catalogo__desplegable {
@@ -301,7 +345,7 @@ main {
   font-size: 1rem;
   font-family: 'Roboto';
   font-weight: 500;
-  border: 2px solid #616161;
+  border: 1px solid #616161;
   border-right: 0ch;
   height: 2.6rem;
   width: 52rem;
@@ -314,7 +358,7 @@ main {
   font-weight: 400;
   width: 6rem;
   height: 2.6rem;
-  border: 2px solid #616161;
+  border: 1px solid #616161;
   border-left: 0;
   background-color: #ffffff;
 }
@@ -333,6 +377,13 @@ main {
   border: 1px solid #c9c5c5;
   height: 300px;
   width: 250px;
+}
+
+.catalogo__categoria .catalogo__titulo {
+  background-color: #023047;
+  font-family: 'Raleway';
+  margin: 0;
+  color: white;
 }
 
 .catalogo__categoria .titulo--categoria {
@@ -368,13 +419,26 @@ main {
 
 .catalogo .bannercategoria {
   grid-area: bannercategoria;
-  width: 57rem;
+  width: 930px;
+  height: 160px;
   text-align: center;
   justify-self: start;
   font-family: "Open Sans";
   font-size: 1.5rem;
-  background-color: #e7e7e7;
+  background-image: url(/img/degradado2.jpg);
   padding: 1rem;
+  border: 1px solid #2b061e;
+}
+
+.catalogo .banner__titulo {
+  font-size: 2rem;
+  font-family: "MONTSERRAT";
+  font-weight: 600;
+  color: black;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  padding: 0.8rem 1.3rem;
+  margin: 0;
 }
 
 .catalogo .productos {
@@ -393,21 +457,62 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Open Sans";
 }
 
-.main__contactos--titulo {
+.main__contactos .main--titulo {
   font-size: 2.5rem;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   margin: 1rem;
 }
 
-.main__contactos__formulario {
+.main__contactos .main__formulario {
   margin: auto;
 }
 
-.main__contactos__formulario__formulario_escribir {
+.main__contactos .main__formulario__formulario_escribir {
   min-height: 5rem;
+}
+
+.main__contactos .main__formulario_escribir {
+  height: 8.5rem;
+  width: 400px;
+}
+
+.main__contactos .formulario__imputs {
+  height: 2.5rem;
+  width: 400px;
+}
+
+.main__contactos .submit {
+  background-color: #fb8500;
+  border-radius: 5px;
+  border: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 3rem;
+  width: 150px;
+}
+
+.compras_bloque {
+  border: 2px solid #219EBC;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.comprar_titulo {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0rem 1.5rem;
+  font-family: "Open Sans";
+}
+
+.comprar_subtitulo {
+  font-size: 0.8rem;
+  margin: 0rem 1.5rem;
+  font-family: "Open Sans";
 }
 
 /*ZONAS DE ENTREGA*/
@@ -444,15 +549,120 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   align-items: center;
+  width: 80%;
+  background-color: white;
+  border: 1px solid black;
 }
 
-.main__comocomprar .main__bloque {
-  background-color: white;
-  margin: 1rem;
-  max-width: 500px;
-  border-radius: 20px;
+.main__comocomprar .compras_iconos {
+  font-size: 3rem;
+  color: #fb8500;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.main__comocomprar .slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+.main__comocomprar .slider::before, .main__comocomprar .slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.main__comocomprar .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.main__comocomprar .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.main__comocomprar .slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.main__comocomprar .slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1100px;
+}
+
+.slider::before, .slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .imagenes_slider {
+  height: 75px;
+  width: 200px;
+}
+
+.slider .slide {
+  height: 150px;
+  width: 300px;
 }
 
 footer {
@@ -535,6 +745,9 @@ footer h2 {
   .menu {
     margin: 0;
   }
+  .fondo__banner {
+    height: 230px;
+  }
   .main__zonaentrega {
     flex-direction: column;
   }
@@ -543,8 +756,7 @@ footer h2 {
   }
   .main--mapa {
     border-radius: 15px;
-    width: 80%;
-    margin: 30px;
+    width: 60%;
   }
   .main--titulo {
     font-size: 1.5rem;
@@ -593,6 +805,9 @@ footer h2 {
   .menu__iniciasesion {
     border-left: 0;
   }
+  .main__textosmapa {
+    width: 600px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -619,6 +834,44 @@ footer h2 {
   }
   .menu__iniciasesion {
     border-left: 0;
+  }
+  .popup {
+    width: 300px;
+  }
+  .slider {
+    width: 230px;
+  }
+  .banner__iconos {
+    font-size: 1rem;
+  }
+  .fondo__banner {
+    height: 600px;
+  }
+  .imperdibles {
+    font-size: 2rem;
+  }
+  .compras_bloque {
+    padding: 0.2rem;
+    margin: 0.3rem;
+  }
+  .main__comocomprar {
+    padding: 0.2rem;
+  }
+  .main--mapa {
+    size: 20%;
+  }
+  .formulario__imputs {
+    height: 2.5rem;
+    width: 250px;
+  }
+  .main__formulario {
+    width: 300px;
+  }
+  .main__formulario_escribir {
+    width: 250px;
+  }
+  .main__textosmapa {
+    width: 80%;
   }
   .catalogo {
     grid-template-columns: 1fr;

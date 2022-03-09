@@ -49,17 +49,18 @@
                 </div>
               </nav>
         </header>
-        <main><!--No consigo dar con una estetica que me guste asi que aplique un formato y alineacion temporal -->
+        <main>
+            <h1 class="main--titulo text-center">Contacto</h1>
+            <h4 class="text-center"> Si tenes alguna duda o reclamo te pedimos por favor que nos contactes.   </h4>
             <section class="main__contactos">
-                <h1 class="main--titulo">Contactenos</h1>
-                <form class="main__formulario" action="" method="get" enctype="text/plain">
-                    <input type="text" name="" id="" placeholder="Nombre y Apellido*" required><br>
-                    <input type="tel" name="" id=""placeholder="Telefono*" required><br>
-                    <input type="email" name="" id=""placeholder="Email*"><br>
+                <form class="main__formulario d-flex flex-column justify-content-center align-items-center" action="" method="get" enctype="text/plain">
+                    <input type="text" class="formulario__imputs" name="" id="" placeholder="Nombre y Apellido*" required><br>
+                    <input type="tel" class="formulario__imputs" name="" id=""placeholder="Telefono*" required><br>
+                    <input type="email" class="formulario__imputs" name="" id=""placeholder="Email*"><br>
                     <h2 class="main--subtitulo">Ingrese su consulta:</h2>
                     <input class="main__formulario_escribir" type="text" name="" id="" required><br>
-                    <input type="submit" value="Enviar Consulta" maxlength="255" >
-                    <h2 class="main--subtitulo">* Campos obligatorios</h2>
+                    <input type="submit" class="submit" value="ENVIAR" maxlength="255" >
+                    <p>* Campos obligatorios</p>
                 </form>
             </section>
         </main>

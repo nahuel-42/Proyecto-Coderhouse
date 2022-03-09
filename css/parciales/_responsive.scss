@@ -11,7 +11,9 @@
     .menu{
         margin: 0;
     }
-    
+    .fondo__banner{
+        height: 230px;
+    }
     .main__zonaentrega{
         flex-direction: column;
     }  
@@ -21,8 +23,7 @@
     }
     .main--mapa{
         border-radius: 15px;
-        width: 80%;
-        margin: 30px;
+        width: 60%;
     } 
     .main--titulo{
         font-size: 1.5rem;
@@ -79,6 +80,9 @@
     .menu__iniciasesion {
         border-left: 0;
     }
+    .main__textosmapa{
+        width: 600px;
+    }
 }
 @media  (max-width: 480px){
     main {
@@ -106,8 +110,44 @@
     .menu__iniciasesion {
         border-left: 0;
     }
-    
-
+    .popup{
+        width: 300px;
+    }
+    .slider{
+        width: 230px;
+    }
+    .banner__iconos{
+        font-size: 1rem;
+    }
+    .fondo__banner{
+        height: 600px;
+    }
+    .imperdibles{
+        font-size: 2rem;
+    }
+    .compras_bloque{
+        padding: 0.2rem;
+        margin: 0.3rem;
+    }
+    .main__comocomprar{
+        padding: 0.2rem;
+    }
+    .main--mapa{
+        size:20%;
+    }
+    .formulario__imputs{
+        height: 2.5rem;
+        width: 250px;
+    }
+    .main__formulario{
+        width: 300px;
+    }
+    .main__formulario_escribir{
+        width:250px
+    }
+    .main__textosmapa{
+        width: 80%;
+    }
     .catalogo{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6,auto);

@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="./css/bootstrap-grid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/6254e1665b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/prueba.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Raleway:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -17,6 +19,40 @@
 </head>
 <body >
     <div class="estructura"> 
+        <!-- Modal -->
+        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog popup">
+            <div class="modal-content d-flex flex-column align-items-center">
+                <h5 class="modal-title py-3  border-bottom w-75 text-center" id="staticBackdropLabel">Sos mayor de 18 años?</h5>
+                <h6 class="pt-2">Indica tu fecha de nacimiento</h6>
+                <div class="modal-body w-100 ">
+                    <div class="container-fluid">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-3  d-flex justify-content-center align-items-center">
+                                <p class="m-0 me-2">Dia:</p>
+                                <input class="fecha__input text-end" type="number" placeholder="DD" min="1" step="1" max="99">
+                            </div>
+                            <div class="col-md-3  d-flex justify-content-center align-items-center">
+                                <p class="m-0 me-2">Mes:</p>
+                                <input class="fecha__input text-end" type="number" placeholder="MM" min="1" step="1" max="99">
+                            </div>
+                            <div class="col-md-3  d-flex justify-content-center align-items-center">
+                                <p class="m-0 me-2">Año:</p>
+                                <input class="fecha__input text-end " type="number" placeholder="AAAA" min="1960" step="1" max="2028">
+                            </div>
+                          </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer w-25  d-flex justify-content-center align-items-center">
+                    <button type="button " class="btn btn-secondary boton_entrar" data-bs-dismiss="modal">Entrar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <section class="container-fluid d-flex justify-content-center align-items-center banner_superior">
+            <p class="h-25">¡Envios gratis por compras superiores de $4000!</p>
+        </section>
         <header>
             <nav class="navbar navbar-expand-lg bg-white">
                 <div class="container-fluid">
@@ -72,39 +108,47 @@
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                     </button>
                 </div>
             </section>
             <section><!--Banner de info de compras -->
-                <div class="container-fluid fondo__banner"> 
+                <div class="container-fluid fondo__banner "> 
                     <div class="row">
-                      <div class="col-md-4  d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-truck-fast banner__iconos " ></i>
-                        <div class="m-2">
-                            <p class="banner__texto1 mb-0">Enviamos tu compra</p>
-                            <p class="banner__texto2 mb-0">Envios gratis desde 3000$</p>
+                      <div class="col-md-4 d-flex justify-content-center align-items-center">
+                          <div class="fila_envios d-flex justify-content-center align-items-center  "> 
+                            <i class="fa-solid fa-truck-fast banner__iconos " ></i>
+                            <div class="m-2">
+                                <p class="banner__texto1 mb-0">Enviamos tu compra</p>
+                                <p class="banner__texto2 mb-0">Para que no te muevas de tu hogar</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <div class="fila_envios d-flex justify-content-center align-items-center "> 
+                          <i class="fa-solid fa-credit-card banner__iconos " ></i>
+                          <div class="mx-3 my-1">
+                              <p class="banner__texto1 mb-0">Paga como quieras</p>
+                              <p class="banner__texto2 mb-0">Todas las tarjetas y efectivo</p>
+                          </div>
                         </div>
                       </div>
                       <div class="col-md-4 d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-credit-card banner__iconos"></i>
-                        <div class="m-2">
-                            <p class="mb-0 banner__texto1 ">Paga como quieras</p>
-                            <p class="mb-0 banner__texto2 ">Todas las tarjetas y efectivo</p>
+                        <div class="fila_envios d-flex justify-content-center align-items-center  "> 
+                          <i class="fa-solid fa-circle-question banner__iconos " ></i>
+                          <div class="m-2">
+                              <p class="banner__texto1 mb-0">Como comprar</p>
+                              <p class="banner__texto2 mb-0">Pasos para que realices tu compra</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-md-4 d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-circle-question  banner__iconos "></i>
-                        <div class="m-2">
-                            <p class="banner__texto1 mb-0">Como comprar</p>
-                            <p class="banner__texto2 mb-0">Paso a paso para que realices tu compra</p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
             </section>
+            <div class="container-fluid bg-secondary linea">
+
+            </div>
             <h2 class="imperdibles">Imperdibles de la semana!</h2>
             <section class="ofertas"><!--Zona Imperdibles -->
                 <div class=ofertas__productos>    
@@ -172,6 +216,53 @@
                     <input class="ofertas__productos__input" type="number" value="1" min="1" step="1" max="99">
                 </div>
             </section>
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img class="imagenes_slider" src="./img/smirnofflogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/bayleislogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/CAMPARI.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img class="imagenes_slider" src="./img/fernetlogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/stella.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/gancialogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img class="imagenes_slider" src="./img/fernetlogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img class="imagenes_slider" src="/img/coronalogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/smirnofflogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/bayleislogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/CAMPARI.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/stella.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img  class="imagenes_slider" src="./img/gancialogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                        <img class="imagenes_slider" src="/img/coronalogo.png" height="100" width="250" alt="" />
+                    </div>
+                </div>
+            </div>
+    
         </main>
         
         <footer >
