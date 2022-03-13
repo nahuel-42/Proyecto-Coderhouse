@@ -19,7 +19,8 @@ main{
 }
 .fondo__banner{
     background-color: #f2f2f2;        
-    height: 150px;  
+    height: auto;  
+    padding-bottom: 0.5rem;
     .banner__iconos{
         font-size: 3rem;               
         color: #2c2c2c;
@@ -27,7 +28,7 @@ main{
     .banner__texto1{
         font-family: "Open Sans";
         font-weight: 500;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         color: #023047;
     }
     .banner__texto2{
@@ -40,7 +41,7 @@ main{
         border: 1px solid #023047;
         padding: 1rem 2rem;
         border-radius: 5px;
-        width: 70%;
+        width: 100%;
         background-color: #ffffff;
     }
 }
@@ -223,9 +224,8 @@ main{
         color: black;
         font-family: 'Open Sans';
         font-weight: 400;
-        position: absolute;
-        margin: 1rem;
-        left: 1100px;
+        margin: 1rem 12rem 1rem 1rem;
+        justify-self:end;
         .catalogo__desplegable{
             font-size: 0.8rem;
             color: black;
@@ -266,7 +266,8 @@ main{
         }
     }
     &__categoria{
-        @include centrado-flex-columna;
+        display: flex;
+        flex-direction: column;
         justify-self:center;
         grid-area:categoria;
         background-color: white;
@@ -274,7 +275,7 @@ main{
         height: 300px;
         width: 250px;
         .catalogo__titulo{
-            background-color: #023047;
+            background-color: #FB8500;
             font-family: 'Raleway';
             margin: 0;
             color: white;
@@ -315,7 +316,7 @@ main{
         justify-self: start;
         font-family: "Open Sans";
         font-size: 1.5rem;
-        background-image: url(/img/degradado2.jpg);
+        background-image: url(../../img/degradado2.jpg);
         padding: 1rem;
         border: 1px solid #2b061e;
     }
@@ -375,6 +376,8 @@ main{
         width: 150px;
     }
 }
+
+/*COMO COMPRAR*/
 .compras_bloque{
     border: 2px solid #219EBC;
     border-radius: 10px;
@@ -414,7 +417,6 @@ main{
     display: grid;
     grid-template-rows: auto 1fr auto auto;
 }
-/*COMO COMPRAR*/
 
 
 
@@ -423,7 +425,7 @@ main{
     align-items: center;
     width: 80%;
     background-color: white;
-    border: 1px solid black;
+    border: 2px solid black;
     @mixin white-gradient {
 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
@@ -434,28 +436,26 @@ main{
 }
 $animationSpeed: 40s;
 
-// Animation
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-250px * 7))}
 }
 
 
-// Styling
 .slider {
 	background: white;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	height: 100px;
+	height: 150px;
 	margin: auto;
 	overflow:hidden;
 	position: relative;
-	width: 960px;
+	width: 100%;
 	
 	&::before,
 	&::after {
 		@include white-gradient;
 		content: "";
-		height: 100px;
+		height: 150px;
 		position: absolute;
 		width: 200px;
 		z-index: 2;
@@ -465,6 +465,7 @@ $animationSpeed: 40s;
 		right: 0;
 		top: 0;
 		transform: rotateZ(180deg);
+        height: 150px;
 	}
 
 	&::before {
@@ -475,12 +476,11 @@ $animationSpeed: 40s;
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
-		width: calc(250px * 14);
+		width: 100%;
 	}
 	
 	.slide {
-		height: 100px;
-		width: 250px;
+		height: 150px;
 	}
 }
 }
@@ -490,14 +490,12 @@ $animationSpeed: 40s;
 
 $animationSpeed: 40s;
 
-// Animation
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-250px * 7))}
 }
 
 
-// Styling
 .slider {
 	background: white;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
@@ -507,11 +505,10 @@ $animationSpeed: 40s;
 	position: relative;
 	width: 1100px;
 	
-	&::before,
-	&::after {
+	&::before,&::after {
 		@include white-gradient;
 		content: "";
-		height: 100px;
+		height: 150px;
 		position: absolute;
 		width: 200px;
 		z-index: 2;

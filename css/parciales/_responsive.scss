@@ -1,35 +1,44 @@
 @import "./_variables";
 
 @media  screen and (max-width: 768px){
-    nav{
-        flex-direction:column ;
+    header{
+        nav{
+            flex-direction:column ;
+            .imag__logo{
+                width: 300px;
+                margin-left: 25px;
+            }
+            .menu__link{
+                margin:0.4rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+            .menu__iniciasesion {
+                border-left: 0;
+            }
+         }
     }
-    .imag__logo{
-        width: 400px;
-        margin-left: 25px;
+    .slider{
+        width: 768px;
     }
-    .menu{
-        margin: 0;
-    }
-    .fondo__banner{
-        height: 230px;
+    .fondo__banner .fila_envios{
+        width: 100%;
+        padding: 0rem 0.5rem;
     }
     .main__zonaentrega{
         flex-direction: column;
+        .main--mapa{
+            border-radius: 15px;
+            width: 80%;
+        } 
+        .main__textosmapa{
+            width: 600px;
+        }
     }  
     
-    .menu__link{
-        margin:0;
-    }
-    .main--mapa{
-        border-radius: 15px;
-        width: 60%;
-    } 
     .main--titulo{
         font-size: 1.5rem;
-    }
-    .catalogo__inputbusqueda {
-        width: 80%;
+        margin-top: 1rem;
     }
     .busqueda{
         width: 100%;
@@ -42,85 +51,100 @@
     .ofertas{
         grid-template-columns: repeat(3,210px);
     }
-    .productos{
-        grid-template-columns: repeat(2,210px);
-        grid-template-rows: repeat(4,1fr);
-        grid-column-gap: 30px;
-        justify-content: center;
-    
-    
-    }
     .catalogo{
         margin: 0;
+        .catalogo__categoria{
+            height: 100%;
+            width: 100%;
+        }
+        .productos{
+            grid-template-columns: repeat(2,210px);
+            grid-template-rows: repeat(3,1fr);
+            grid-column-gap: 30px;
+            justify-content: center;
+        }
+        .listaproductos{
+            padding: 0;
+            list-style-position: initial;
+        }
+        .categorias{
+            margin-left: 2rem;
+            font-size: 1rem;
+            
+        }
+        &__inicio{
+            margin-left: 0.5rem;
+        }
+        &__categoria{
+            .titulo--categoria{
+                margin-left: 1rem;
+            }
+        }
+        .bannercategoria{
+            width: 100%;
+        }
+        .busqueda{
+            display: flex;
+            justify-content: end;
+            .catalogo__inputbusqueda {
+                width: 80%;
+            }
+
+        }
+        .catalogo__filtro{
+            margin-right: 0.5rem;
+        }
     }
-    .listaproductos{
-        padding: 0;
-        list-style-position: initial;
-    }
-    .productos{
-        grid-template-columns: repeat(2,210px);
-        grid-template-rows: repeat(3,1fr);
-        grid-column-gap: 30px;
-        justify-content: center;
     
-    
-    }
-    .categorias{
-    
-        font-size: 1rem;
-    }
-    .bannercategoria{
-        width: 100%;
-    }
-    
-    .catalogo__categoria{
-        height: 100%;
-        width: 100%;
-    }
-    .menu__iniciasesion {
-        border-left: 0;
-    }
-    .main__textosmapa{
-        width: 600px;
-    }
 }
+
 @media  (max-width: 480px){
     main {
         min-height: 0;
     }
     header{
         padding: 0;
-    }
-    .imag__logo{
-        width: 225px;
-        margin: 5px;
+        nav{
+            flex-direction:row;
+            align-items: center;
+            justify-content: center;
+            .menu__link{
+                margin:0;
+                font-weight: 400;
+                font-size: 1rem;
+            }
+            .menu__iniciasesion {
+                border-left: 0;
+            }
+            .imag__logo{
+                width: 225px;
+                margin: 5px;
+            }
+        
+        }
     }
 
-    nav{
-        flex-direction:row;
-        align-items: center;
-        justify-content: center;
+    .fondo__banner{
+        margin-bottom: 1rem;
+        .banner__texto1{
+            font-size: 1.1rem;
+        }
+        .banner__iconos{
+            font-size: 1rem;
+        }
+        .fila_envios {
+            padding: 0rem 2rem;
+            border-radius: 2px;
+            width: 100%;
+        }
+
     }
-    .menu{
-        flex-direction:column;
-    }
-    .menu__link{
-        margin:0;
-    }
-    .menu__iniciasesion {
-        border-left: 0;
-    }
+
     .popup{
         width: 300px;
     }
     .slider{
         width: 230px;
-    }
-    .banner__iconos{
-        font-size: 1rem;
-    }
-    .fondo__banner{
-        height: 600px;
     }
     .imperdibles{
         font-size: 2rem;
@@ -129,24 +153,18 @@
         padding: 0.2rem;
         margin: 0.3rem;
     }
-    .main__comocomprar{
-        padding: 0.2rem;
-    }
-    .main--mapa{
-        size:20%;
-    }
-    .formulario__imputs{
-        height: 2.5rem;
-        width: 250px;
-    }
-    .main__formulario{
-        width: 300px;
-    }
-    .main__formulario_escribir{
-        width:250px
-    }
-    .main__textosmapa{
-        width: 80%;
+    .main__contactos{
+        .formulario__imputs{
+            height: 2.5rem;
+            width: 250px;
+        }
+        .main__formulario{
+            width: 300px;
+        }
+        .main__formulario_escribir{
+            width:250px
+        }
+
     }
     .catalogo{
         grid-template-columns: 1fr;
@@ -157,44 +175,64 @@
                          "busqueda"
                           "bannercategoria"
                            "productos";
+        .productos{
+            grid-template-columns: repeat(1,210px);
+            grid-template-rows: repeat(7,1fr);
+            grid-column-gap: 30px;
+            justify-content: center;
+        }
+        .catalogo__categoria{
+            width: 90%;
+            .titulo--categoria{
+                margin: 0.5rem 1rem;
+            }
+            .listaproductos{
+                margin-left: 3rem;
+
+                .categorias{
+                margin: 0;
+                }
+            }   
+        }
+        .busqueda{
+            grid-area: busqueda;
+            justify-content: center;
+            .catalogo__inputbusqueda {
+                width: 70%;
+            }
+        }
+        .bannercategoria{
+            width: 100%;
+        }
+        &__indice {
+            margin-top: 1rem;
+        }
+        &__filtro{
+            margin: 0;
+        }
     }
-    .catalogo__indice{
-        grid-area: indice;
-        margin: 0;
+    .banner_superior{
+        height: 2.8rem;
+        text-align: center;
+        .texto_superior{
+            line-height: 1rem;
+
+        }
     }
-    .catalogo__filtro{
-        grid-area: filtro;
+
+    .main__comocomprar{
+        width: 90%;
     }
-    .catalogo__categoria{
-        grid-area:categoria;
-    }
-    .busqueda{
-        grid-area: busqueda;
-    }
-    .bannercategoria{
-        grid-area: bannercategoria;
-    }
-    .catalogo__inputbusqueda {
-        width: 60%;
-    }
+    
     .listaproductos{
         padding: 0;
         list-style-position: initial;
+        .categorias{
+        
+            font-size: 1rem;
+        }
     }
-    .productos{
-        grid-area:productos;
-        grid-template-columns: repeat(1,210px);
-        grid-template-rows: repeat(7,1fr);
-        grid-column-gap: 30px;
-        justify-content: center;
-    }
-    .categorias{
     
-        font-size: 1rem;
-    }
-    .bannercategoria{
-        width: 100%;
-    }
 
     .ofertas{
         grid-template-columns: repeat(1,210px);
@@ -203,15 +241,19 @@
     
     .main__zonaentrega{
         flex-direction: column;
+        .main--mapa{
+            width: 95%;
+            
+        }
+        .main__textosmapa{
+            width: 80%;
+        }
+        .main--titulo{
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
     }  
     
-    .main--mapa{
-        border-radius: 15px;
-        width: 90%;
-    } 
-    .main--titulo{
-        font-size: 1.5rem;
-    }
     .pie{
         flex-direction: column;
     }

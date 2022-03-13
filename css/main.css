@@ -70,13 +70,13 @@ header nav .menu--carrito:hover {
   font-size: 1.5rem;
   color: #ffffff;
   background-color: #f44708;
-  border: 1px solid #414141;
+  border: 1px solid #f44708;
   padding: 0.6rem 0.8rem 0.6rem 0.7rem;
 }
 
 main {
   min-height: 100vh;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
 }
 
 .boton_entrar {
@@ -98,7 +98,8 @@ main {
 
 .fondo__banner {
   background-color: #f2f2f2;
-  height: 150px;
+  height: auto;
+  padding-bottom: 0.5rem;
 }
 
 .fondo__banner .banner__iconos {
@@ -109,7 +110,7 @@ main {
 .fondo__banner .banner__texto1 {
   font-family: "Open Sans";
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #023047;
 }
 
@@ -124,7 +125,7 @@ main {
   border: 1px solid #023047;
   padding: 1rem 2rem;
   border-radius: 5px;
-  width: 70%;
+  width: 100%;
   background-color: #ffffff;
 }
 
@@ -319,9 +320,8 @@ main {
   color: black;
   font-family: 'Open Sans';
   font-weight: 400;
-  position: absolute;
-  margin: 1rem;
-  left: 1100px;
+  margin: 1rem 12rem 1rem 1rem;
+  justify-self: end;
 }
 
 .catalogo__filtro .catalogo__desplegable {
@@ -370,7 +370,6 @@ main {
 .catalogo__categoria {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   justify-self: center;
   grid-area: categoria;
   background-color: white;
@@ -380,7 +379,7 @@ main {
 }
 
 .catalogo__categoria .catalogo__titulo {
-  background-color: #023047;
+  background-color: #FB8500;
   font-family: 'Raleway';
   margin: 0;
   color: white;
@@ -425,7 +424,7 @@ main {
   justify-self: start;
   font-family: "Open Sans";
   font-size: 1.5rem;
-  background-image: url(/img/degradado2.jpg);
+  background-image: url(../../img/degradado2.jpg);
   padding: 1rem;
   border: 1px solid #2b061e;
 }
@@ -495,6 +494,7 @@ main {
   width: 150px;
 }
 
+/*COMO COMPRAR*/
 .compras_bloque {
   border: 2px solid #219EBC;
   border-radius: 10px;
@@ -544,7 +544,6 @@ main {
   grid-template-rows: auto 1fr auto auto;
 }
 
-/*COMO COMPRAR*/
 .main__comocomprar {
   display: flex;
   flex-direction: column;
@@ -552,7 +551,7 @@ main {
   align-items: center;
   width: 80%;
   background-color: white;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .main__comocomprar .compras_iconos {
@@ -572,17 +571,17 @@ main {
 .main__comocomprar .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
+  height: 150px;
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 960px;
+  width: 100%;
 }
 
 .main__comocomprar .slider::before, .main__comocomprar .slider::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
-  height: 100px;
+  height: 150px;
   position: absolute;
   width: 200px;
   z-index: 2;
@@ -592,6 +591,7 @@ main {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
+  height: 150px;
 }
 
 .main__comocomprar .slider::before {
@@ -602,12 +602,11 @@ main {
 .main__comocomprar .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: 100%;
 }
 
 .main__comocomprar .slider .slide {
-  height: 100px;
-  width: 250px;
+  height: 150px;
 }
 
 @keyframes scroll {
@@ -632,7 +631,7 @@ main {
 .slider::before, .slider::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
-  height: 100px;
+  height: 150px;
   position: absolute;
   width: 200px;
   z-index: 2;
@@ -735,34 +734,41 @@ footer h2 {
 }
 
 @media screen and (max-width: 768px) {
-  nav {
+  header nav {
     flex-direction: column;
   }
-  .imag__logo {
-    width: 400px;
+  header nav .imag__logo {
+    width: 300px;
     margin-left: 25px;
   }
-  .menu {
-    margin: 0;
+  header nav .menu__link, header nav .menu__iniciasesion {
+    margin: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
-  .fondo__banner {
-    height: 230px;
+  header nav .menu__iniciasesion {
+    border-left: 0;
+  }
+  .slider {
+    width: 768px;
+  }
+  .fondo__banner .fila_envios {
+    width: 100%;
+    padding: 0rem 0.5rem;
   }
   .main__zonaentrega {
     flex-direction: column;
   }
-  .menu__link, header nav .menu__iniciasesion {
-    margin: 0;
-  }
-  .main--mapa {
+  .main__zonaentrega .main--mapa {
     border-radius: 15px;
-    width: 60%;
+    width: 80%;
+  }
+  .main__zonaentrega .main__textosmapa {
+    width: 600px;
   }
   .main--titulo {
     font-size: 1.5rem;
-  }
-  .catalogo__inputbusqueda {
-    width: 80%;
+    margin-top: 1rem;
   }
   .busqueda {
     width: 100%;
@@ -773,40 +779,45 @@ footer h2 {
   .ofertas {
     grid-template-columns: repeat(3, 210px);
   }
-  .productos {
-    grid-template-columns: repeat(2, 210px);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 30px;
-    justify-content: center;
-  }
   .catalogo {
     margin: 0;
   }
-  .listaproductos {
-    padding: 0;
-    list-style-position: initial;
+  .catalogo .catalogo__categoria {
+    height: 100%;
+    width: 100%;
   }
-  .productos {
+  .catalogo .productos {
     grid-template-columns: repeat(2, 210px);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 30px;
     justify-content: center;
   }
-  .categorias {
+  .catalogo .listaproductos {
+    padding: 0;
+    list-style-position: initial;
+  }
+  .catalogo .categorias {
+    margin-left: 2rem;
     font-size: 1rem;
   }
-  .bannercategoria {
+  .catalogo__inicio {
+    margin-left: 0.5rem;
+  }
+  .catalogo__categoria .titulo--categoria {
+    margin-left: 1rem;
+  }
+  .catalogo .bannercategoria {
     width: 100%;
   }
-  .catalogo__categoria {
-    height: 100%;
-    width: 100%;
+  .catalogo .busqueda {
+    display: flex;
+    justify-content: end;
   }
-  .menu__iniciasesion {
-    border-left: 0;
+  .catalogo .busqueda .catalogo__inputbusqueda {
+    width: 80%;
   }
-  .main__textosmapa {
-    width: 600px;
+  .catalogo .catalogo__filtro {
+    margin-right: 0.5rem;
   }
 }
 
@@ -817,35 +828,42 @@ footer h2 {
   header {
     padding: 0;
   }
-  .imag__logo {
-    width: 225px;
-    margin: 5px;
-  }
-  nav {
+  header nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
-  .menu {
-    flex-direction: column;
-  }
-  .menu__link, header nav .menu__iniciasesion {
+  header nav .menu__link, header nav .menu__iniciasesion {
     margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
   }
-  .menu__iniciasesion {
+  header nav .menu__iniciasesion {
     border-left: 0;
+  }
+  header nav .imag__logo {
+    width: 225px;
+    margin: 5px;
+  }
+  .fondo__banner {
+    margin-bottom: 1rem;
+  }
+  .fondo__banner .banner__texto1 {
+    font-size: 1.1rem;
+  }
+  .fondo__banner .banner__iconos {
+    font-size: 1rem;
+  }
+  .fondo__banner .fila_envios {
+    padding: 0rem 2rem;
+    border-radius: 2px;
+    width: 100%;
   }
   .popup {
     width: 300px;
   }
   .slider {
     width: 230px;
-  }
-  .banner__iconos {
-    font-size: 1rem;
-  }
-  .fondo__banner {
-    height: 600px;
   }
   .imperdibles {
     font-size: 2rem;
@@ -854,65 +872,71 @@ footer h2 {
     padding: 0.2rem;
     margin: 0.3rem;
   }
-  .main__comocomprar {
-    padding: 0.2rem;
-  }
-  .main--mapa {
-    size: 20%;
-  }
-  .formulario__imputs {
+  .main__contactos .formulario__imputs {
     height: 2.5rem;
     width: 250px;
   }
-  .main__formulario {
+  .main__contactos .main__formulario {
     width: 300px;
   }
-  .main__formulario_escribir {
+  .main__contactos .main__formulario_escribir {
     width: 250px;
-  }
-  .main__textosmapa {
-    width: 80%;
   }
   .catalogo {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
     grid-template-areas: "indice"  "filtro"  "categoria"  "busqueda" "bannercategoria" "productos";
   }
-  .catalogo__indice {
-    grid-area: indice;
-    margin: 0;
-  }
-  .catalogo__filtro {
-    grid-area: filtro;
-  }
-  .catalogo__categoria {
-    grid-area: categoria;
-  }
-  .busqueda {
-    grid-area: busqueda;
-  }
-  .bannercategoria {
-    grid-area: bannercategoria;
-  }
-  .catalogo__inputbusqueda {
-    width: 60%;
-  }
-  .listaproductos {
-    padding: 0;
-    list-style-position: initial;
-  }
-  .productos {
-    grid-area: productos;
+  .catalogo .productos {
     grid-template-columns: repeat(1, 210px);
     grid-template-rows: repeat(7, 1fr);
     grid-column-gap: 30px;
     justify-content: center;
   }
-  .categorias {
-    font-size: 1rem;
+  .catalogo .catalogo__categoria {
+    width: 90%;
   }
-  .bannercategoria {
+  .catalogo .catalogo__categoria .titulo--categoria {
+    margin: 0.5rem 1rem;
+  }
+  .catalogo .catalogo__categoria .listaproductos {
+    margin-left: 3rem;
+  }
+  .catalogo .catalogo__categoria .listaproductos .categorias {
+    margin: 0;
+  }
+  .catalogo .busqueda {
+    grid-area: busqueda;
+    justify-content: center;
+  }
+  .catalogo .busqueda .catalogo__inputbusqueda {
+    width: 70%;
+  }
+  .catalogo .bannercategoria {
     width: 100%;
+  }
+  .catalogo__indice {
+    margin-top: 1rem;
+  }
+  .catalogo__filtro {
+    margin: 0;
+  }
+  .banner_superior {
+    height: 2.8rem;
+    text-align: center;
+  }
+  .banner_superior .texto_superior {
+    line-height: 1rem;
+  }
+  .main__comocomprar {
+    width: 90%;
+  }
+  .listaproductos {
+    padding: 0;
+    list-style-position: initial;
+  }
+  .listaproductos .categorias {
+    font-size: 1rem;
   }
   .ofertas {
     grid-template-columns: repeat(1, 210px);
@@ -921,12 +945,15 @@ footer h2 {
   .main__zonaentrega {
     flex-direction: column;
   }
-  .main--mapa {
-    border-radius: 15px;
-    width: 90%;
+  .main__zonaentrega .main--mapa {
+    width: 95%;
   }
-  .main--titulo {
+  .main__zonaentrega .main__textosmapa {
+    width: 80%;
+  }
+  .main__zonaentrega .main--titulo {
     font-size: 1.5rem;
+    margin-top: 1rem;
   }
   .pie {
     flex-direction: column;
