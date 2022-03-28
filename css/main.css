@@ -38,7 +38,7 @@ header nav .menu__link, header nav .menu__iniciasesion {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   margin: 1rem;
-  padding: 0.1rem;
+  padding: 0;
 }
 
 header nav .menu__link:hover, header nav .menu__iniciasesion:hover {
@@ -77,6 +77,7 @@ header nav .menu--carrito:hover {
 main {
   min-height: 100vh;
   background-color: #f8f8f8;
+  background: white;
 }
 
 .boton_entrar {
@@ -97,7 +98,6 @@ main {
 }
 
 .fondo__banner {
-  background-color: #f2f2f2;
   height: auto;
   padding-bottom: 0.5rem;
 }
@@ -144,7 +144,7 @@ main {
   display: grid;
   margin: 0 auto;
   width: 100%;
-  grid-template-columns: repeat(4, 250px);
+  grid-template-columns: repeat(4, 210px);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 30px;
   justify-content: center;
@@ -160,7 +160,8 @@ main {
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   border: 2px solid #e8e8e8;
-  border-radius: 0px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 2px #c5c5c5;
   background-color: #ffffff;
   transition: 0.5s;
   max-height: 430px;
@@ -320,7 +321,7 @@ main {
   color: black;
   font-family: 'Open Sans';
   font-weight: 400;
-  margin: 1rem 12rem 1rem 1rem;
+  margin: 1rem 6rem 1rem 1rem;
   justify-self: end;
 }
 
@@ -445,7 +446,7 @@ main {
   display: grid;
   margin: 0 auto;
   width: 100%;
-  grid-template-columns: repeat(4, 210px);
+  grid-template-columns: repeat(4, 190px);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 30px;
   justify-content: start;
@@ -494,6 +495,24 @@ main {
   width: 150px;
 }
 
+.main__zonaentrega {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__zonaentrega .main__textosmapa .main--subtitulo {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.main__zonaentrega .main--mapa {
+  border-radius: 15px;
+}
+
 /*COMO COMPRAR*/
 .compras_bloque {
   border: 2px solid #219EBC;
@@ -515,35 +534,6 @@ main {
   font-family: "Open Sans";
 }
 
-/*ZONAS DE ENTREGA*/
-.main__zonaentrega {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main__zonaentrega .main__textosmapa {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.main__zonaentrega .main__textosmapa .main--subtitulo {
-  font-size: 1rem;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-}
-
-.main__zonaentrega .main--mapa {
-  border-radius: 15px;
-}
-
-.estructura {
-  display: grid;
-  grid-template-rows: auto 1fr auto auto;
-}
-
 .main__comocomprar {
   display: flex;
   flex-direction: column;
@@ -551,7 +541,12 @@ main {
   align-items: center;
   width: 80%;
   background-color: white;
-  border: 2px solid black;
+  border: 2px solid #219EBC;
+}
+
+.main__comocomprar .estructura {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
 }
 
 .main__comocomprar .compras_iconos {
@@ -575,7 +570,7 @@ main {
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 95%;
 }
 
 .main__comocomprar .slider::before, .main__comocomprar .slider::after {
@@ -731,6 +726,25 @@ footer h2 {
   text-align: center;
   font-size: 0.8rem;
   padding: 0.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  header nav .menu__link, header nav .menu__iniciasesion {
+    margin: 0.2rem;
+    font-size: 0.8rem;
+  }
+  .catalogo .productos {
+    grid-template-columns: repeat(3, 210px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    justify-content: center;
+  }
+  .catalogo .bannercategoria {
+    width: 800px;
+  }
+  .catalogo .busqueda .catalogo__inputbusqueda {
+    width: 40rem;
+  }
 }
 
 @media screen and (max-width: 768px) {

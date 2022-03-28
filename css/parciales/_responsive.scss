@@ -1,5 +1,25 @@
 @import "./_variables";
 
+@media  screen and (max-width: 1024px){
+    header nav .menu__link{
+        margin: 0.2rem;
+        font-size: 0.8rem;
+    }
+    .catalogo{
+        .productos{
+            grid-template-columns: repeat(3,210px);
+            grid-template-rows: repeat(3,1fr);
+            grid-column-gap: 30px;
+            justify-content: center;
+        }
+        .bannercategoria{
+            width: 800px;}
+        .busqueda .catalogo__inputbusqueda {
+            width: 40rem;
+        }
+    }
+}
+
 @media  screen and (max-width: 768px){
     header{
         nav{
